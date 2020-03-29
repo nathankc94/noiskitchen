@@ -19,7 +19,7 @@ text-shadow: 1px 1px 4px black;
 export function Navbar() {
     return <NavbarStyled>
         <Logo>
-            Noi's Kitchen 👩🏻‍🍳
+            Noi's Kitchen
         </Logo>
     </NavbarStyled>;
 }
