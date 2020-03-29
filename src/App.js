@@ -1,8 +1,8 @@
 import React from 'react';
 import { createGlobalStyle } from "styled-components"
-import { Navbar } from "./Navbar/navbar";
-import { Banner } from "./Banner/banner";
-
+import { Navbar } from "./Navbar/Navbar";
+import { Banner } from "./Banner/Banner";
+import { Menu } from "./Menu/Menu";
 
 
 
@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Abel', sans-serif;
   }
 
-  h1, h2, h3 {
+   h2, h3 {
     font-family: 'Lobster', cursive;
   }
 `
@@ -23,6 +23,7 @@ function App() {
     <GlobalStyle/>
     <Navbar/>
     <Banner/>
+    <Menu/>
     <h1>Noi's Kitchen</h1>
    <div>Food are here</div>
 

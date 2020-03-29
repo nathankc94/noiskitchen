@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { menuGray } from "../Style/colors";
-import { Title } from "../Style/title";
+import { menuGray } from "../Style/Colors";
+import { Title } from "../Style/Title";
 
 
 const NavbarStyled = styled.div`
