@@ -21,27 +21,27 @@ export const foodItems = [
     },
     {
         name: 'Pad Thai',
-        img: '/img/Stickyrice.jpg',
+        img: '/img/Padthai.jpg',
         section: 'STIR-FRY'
     },
     {
         name: 'Grapow',
-        img: '/img/Stickyrice.jpg',
+        img: '/img/Grapow.jpg',
         section: 'STIR-FRY'
     },
     {
         name: 'Thai Fried Rice',
-        img: '/img/Stickyrice.jpg',
+        img: '/img/Friedrice.jpg',
         section: 'STIR-FRY'
     },
     {
         name: 'Tom Yum Fried Rice',
-        img: '/img/Stickyrice.jpg',
+        img: '/img/Tomyumfriedrice.jpg',
         section: 'STIR-FRY'
     },
     {
         name: 'Green Curry Fried Rice',
-        img: '/img/Stickyrice.jpg',
+        img: '/img/Greenfriedrice.jpg',
         section: 'STIR-FRY'
     },
 ];
