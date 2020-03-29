@@ -7,9 +7,11 @@ grid-template-columns: 1fr 1fr;
 gap: 20px;
 `
 export const  FoodLabel = styled.div`
+font-size: 30px;
 position: absolute;
 background-color: rgba( 255,  255,  255, .8);
 padding 5px;
+border-radius: 7px;
 `
 
 export const Food = styled.div`
