@@ -44,6 +44,41 @@ export const foodItems = [
         img: '/img/Greenfriedrice.jpg',
         section: 'STIR-FRY'
     },
+    {
+        name: 'Green Curry',
+        img: '/img/Greencurry.jpg',
+        section: 'CURRY'
+    },
+    {
+        name: 'Panang',
+        img: '/img/Panang.jpg',
+        section: 'CURRY'
+    },
+    {
+        name: 'Laab',
+        img: '/img/Laab.png',
+        section: 'THAI MEAT SALAD'
+    },
+    {
+        name: 'Grilled Thai Steak Salad',
+        img: '/img/Namtok.jpg',
+        section: 'THAI MEAT SALAD'
+    },
+    {
+        name: 'Grilled Thai Pork Ribs with Sticky Rice',
+        img: '/img/Ribs.png',
+        section: 'GRILLED'
+    },
+    {
+        name: 'Thai Coconut Soup with Chicken',
+        img: '/img/Tomkha.jpg',
+        section: 'SOUP'
+    },
+    {
+        name: 'Thai Beef Noodle Soup with Meatballs',
+        img: '/img/Beefsoup.jpg',
+        section: 'SOUP'
+    },
 ];
 
 export const foods = foodItems.reduce((res, food) =>{

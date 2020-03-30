@@ -1,1 +1,1 @@
-export const menuGray = "gray";
+export const menuGray = "#ad0b0b";

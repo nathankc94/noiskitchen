@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { DialogContent, DialogFooter, ConfirmButton} from "../FoodDialog/FoodDialog";
 
 const OrderStyled = styled.div`
 position: fixed;
@@ -14,6 +15,19 @@ display: flex;
 flex-direction: column;
 `;
 
+const OrderContent = styled(DialogContent)`
+height: 100%;
+padding: 20px;
+`;
+
+const OrderFooter = styled.d
 export function Order() {
-return <OrderStyled>Your order is empty.</OrderStyled>;
+return <OrderStyled>
+<OrderContent>
+    Your order's looking pretty empty.
+</OrderContent>
+<DialogFooter>
+    <ConfirmButton>Checkout</ConfirmButton>
+</DialogFooter>
+</OrderStyled>;
 }

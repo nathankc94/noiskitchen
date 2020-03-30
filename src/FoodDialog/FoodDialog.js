@@ -3,14 +3,41 @@ import styled from "styled-components";
 import { FoodLable, FoodLabel } from "../Menu/FoodGrid";
 const Dialog = styled.div`
   width: 500px;
-  height: 500px;
   background-color: white;
   position: fixed;
   top: 75px;
   z-index: 5;
   max-height: calc(100% - 100px);
   left: calc(50% - 250px);
+  display: flex;
+  flex-direction: column;
 `;
+
+export const DialogContent = styled.div`
+overflow: auto;
+min-height: 100px;
+`;
+
+
+export const DialogFooter = styled.div`
+box-shadow: 0px -2px 10px 0px gray;
+height: 60px; 
+display: flex;
+justify-content: center;
+`;
+
+export const ConfirmButton = styled.div`
+margin: 10px;
+color: white;
+height: 20px;
+width: 200px;
+border-radius: 5px;
+padding: 10px;
+text-align:  center;
+cursor: pointer;
+background-color: green;
+`;
+
 const DialogShadow = styled.div`
   position: fixed;
   height: 100%;
@@ -43,10 +70,18 @@ export function FoodDialog({ openFood, setOpenFood }) {
     <>
       <DialogShadow onClick={close} />
       <Dialog>
-        {" "}
+        
         <DialogBanner img={openFood.img}>
           <DialogBannerName>{openFood.name}</DialogBannerName>
         </DialogBanner>
+        <DialogContent>
+
+        </DialogContent>
+        <DialogFooter>
+        <ConfirmButton>
+            Add to order
+        </ConfirmButton>
+        </DialogFooter>
       </Dialog>
     </>
   ) : null;
