@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FoodLable, FoodLabel } from "../Menu/FoodGrid";
+import { FoodLabel } from "../Menu/FoodGrid";
 const Dialog = styled.div`
   width: 500px;
   background-color: white;
@@ -62,11 +62,20 @@ font-size: 30px;
 padding: 5px 40px;
 `;
 
-export function FoodDialog({ openFood, setOpenFood }) {
+export function FoodDialog({ openFood, setOpenFood, setOrders, orders }) {
   function close() {
     setOpenFood();
   }
-  return openFood ? (
+  if(!openFood) return null;
+  const order = {
+    name: openFood.name
+  }
+  function addToOrder(){
+setOrders([...orders, order]);
+close();
+  }
+
+  return (
     <>
       <DialogShadow onClick={close} />
       <Dialog>
@@ -78,11 +87,11 @@ export function FoodDialog({ openFood, setOpenFood }) {
 
         </DialogContent>
         <DialogFooter>
-        <ConfirmButton>
+        <ConfirmButton onClick={addToOrder}>
             Add to order
         </ConfirmButton>
         </DialogFooter>
       </Dialog>
     </>
-  ) : null;
+  );
 }
