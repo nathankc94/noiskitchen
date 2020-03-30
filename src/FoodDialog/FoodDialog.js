@@ -16,6 +16,7 @@ const Dialog = styled.div`
 export const DialogContent = styled.div`
 overflow: auto;
 min-height: 100px;
+font-size: 20px;
 `;
 
 
