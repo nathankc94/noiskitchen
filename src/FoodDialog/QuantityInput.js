@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { menuGray } from "../Style/Colors";
-import { Title } from "../Styles/title";
+import { Title } from "../Style/Title";
 const QuantityInputStyled = styled.input`
   font-size: 18px;
   width: 24px;
