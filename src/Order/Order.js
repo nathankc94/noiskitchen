@@ -20,6 +20,11 @@ const OrderStyled = styled.div`
   flex-direction: column;
 `;
 
+const DetailItem = styled.div`
+color: gray;
+font-size: 15px;
+`;
+
 const OrderContent = styled(DialogContent)`
   height: 100%;
   padding: 20px;
@@ -37,26 +42,48 @@ const OrderItem = styled.div`
   justify-content: space-between;
 `;
 
-export function Order({ orders }) {
+export function Order({ orders, setOrders}) {
   const total = orders.reduce((total, order) => {
     return total + getPrice(order);
   }, 0);
 
+  const deleteItem = index => {
+    const newOrders = [...orders];
+    newOrders.splice(index, 1);
+    setOrders(newOrders);
+  };
+
   return (
     <OrderStyled>
       {orders.length === 0 ? (
-        <OrderContent>Your order's looking pretty empty.</OrderContent>
+        <OrderContent>Your order's empty.</OrderContent>
       ) : (
         <OrderContent>
-          <OrderContainer>Your order:</OrderContainer>
-          {orders.map(order => (
-            <OrderContainer>
-              <OrderItem>
-                <div>{order.quantity}x</div>
+          {" "}
+          <OrderContainer> Your Order: </OrderContainer>{" "}
+          {orders.map((order, index) => (
+            <OrderContainer editable>
+              <OrderItem
+              
+              >
+                <div>{order.quantity}</div>
                 <div>{order.name}</div>
-                <div />
+                <div
+                  style={{ cursor: "pointer" }}
+                  onClick={e => {
+                    e.stopPropagation();
+                    deleteItem(index);
+                  }}
+                >
+                  🗑
+                </div>
                 <div>{formatPrice(getPrice(order))}</div>
               </OrderItem>
+              <DetailItem>
+                {order.toppings.filter(t =>t.checked).map(topping => topping.name).join(", ")}
+              </DetailItem>
+              {order.choice && <DetailItem>{order.choice}</DetailItem>}
+              {order.spice && <DetailItem>{order.spice}</DetailItem>}
             </OrderContainer>
           ))}
           <OrderContainer>

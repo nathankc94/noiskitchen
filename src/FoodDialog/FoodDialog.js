@@ -4,7 +4,12 @@ import { FoodLabel } from "../Menu/FoodGrid";
 import { formatPrice } from "../Data/FoodData";
 import { QuantityInput } from "./QuantityInput";
 import { useQuantity } from "../Hooks/useQuantity";
-
+// import { Toppings } from "./Toppings";
+import { useToppings } from "../Hooks/useToppings";
+import { useChoice } from "../Hooks/useChoice";
+import { Choices } from "../FoodDialog/Choices";
+import { Spices } from "../FoodDialog/HowSpicy";
+import { useSpice } from "../Hooks/useSpice";
 const Dialog = styled.div`
   width: 500px;
   background-color: white;
@@ -18,30 +23,37 @@ const Dialog = styled.div`
 `;
 
 export const DialogContent = styled.div`
-overflow: auto;
-min-height: 100px;
-font-size: 20px;
-padding: 0px 40px;
+  overflow: auto;
+  min-height: 100px;
+  font-size: 20px;
+  padding: 0px 40px;
+  padding-bottom: 80px;
 `;
 
-
 export const DialogFooter = styled.div`
-box-shadow: 0px -2px 10px 0px gray;
-height: 60px; 
-display: flex;
-justify-content: center;
+  box-shadow: 0px -2px 10px 0px gray;
+  height: 60px;
+  display: flex;
+  justify-content: center;
 `;
 
 export const ConfirmButton = styled.div`
-margin: 10px;
-color: white;
-height: 20px;
-width: 200px;
-border-radius: 5px;
-padding: 10px;
-text-align:  center;
-cursor: pointer;
-background-color: green;
+  margin: 10px;
+  color: white;
+  height: 20px;
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: green;
+  ${({ disabled }) =>
+    disabled &&
+    `
+    opactity: .5; 
+    background-color: grey; 
+    pointer-events: none; 
+  `}
 `;
 
 const DialogShadow = styled.div`
@@ -63,44 +75,73 @@ const DialogBanner = styled.div`
 `;
 
 const DialogBannerName = styled(FoodLabel)`
-top: 100px;
-font-size: 30px;
-padding: 5px 40px;
+  top: 100px;
+  font-size: 30px;
+  padding: 5px 40px;
 `;
+
+// function hasToppings(food){
+//   return food.section === "STIR-FRY";
+// }
+// {hasToppings(openFood) && (
+//   <>
+//   <h3>Toppings?</h3>
+//   <Toppings {...toppings} />
+//   </>
+//   )}
+
+const pricePerTopping = 1;
+
 export function getPrice(order) {
-  return order.quantity * order.price; 
+  return (
+    order.quantity *
+    (order.price +
+      order.toppings.filter(t => t.checked).length * pricePerTopping)
+  );
 }
 
 function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
   const quantity = useQuantity(openFood && openFood.quantity);
+  const toppings = useToppings(openFood.toppings);
+  const choiceRadio = useChoice(openFood.choice);
+  const spiceRadio = useSpice(openFood.spice);
   function close() {
     setOpenFood();
   }
-  
+
   const order = {
     ...openFood,
-    quantity: quantity.value
-  }
-  function addToOrder(){
-setOrders([...orders, order]);
-close();
+    quantity: quantity.value,
+    toppings: toppings.toppings,
+    choice: choiceRadio.value,
+    spice: spiceRadio.value
+  };
+  function addToOrder() {
+    setOrders([...orders, order]);
+    close();
   }
 
   return (
     <>
       <DialogShadow onClick={close} />
       <Dialog>
-        
         <DialogBanner img={openFood.img}>
           <DialogBannerName>{openFood.name}</DialogBannerName>
         </DialogBanner>
         <DialogContent>
-          <QuantityInput quantity={quantity}/>
+          <QuantityInput quantity={quantity} />
+
+          {openFood.choices && (
+            <Choices openFood={openFood} choiceRadio={choiceRadio} />
+          )}
+          {openFood.spices && (
+            <Spices openFood={openFood} spiceRadio={spiceRadio} />
+          )}
         </DialogContent>
         <DialogFooter>
-        <ConfirmButton onClick={addToOrder}>
+          <ConfirmButton onClick={addToOrder} disabled={openFood.choices && !choiceRadio.value}>
             Add to order: {formatPrice(getPrice(order))}
-        </ConfirmButton>
+          </ConfirmButton>
         </DialogFooter>
       </Dialog>
     </>
@@ -108,6 +149,6 @@ close();
 }
 
 export function FoodDialog(props) {
-  if(!props.openFood) return null;
-  return <FoodDialogContainer {...props}/>
+  if (!props.openFood) return null;
+  return <FoodDialogContainer {...props} />;
 }
