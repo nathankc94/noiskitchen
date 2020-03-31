@@ -9,11 +9,7 @@ import { useOpenFood } from "./Hooks/useOpenFoods";
 import { useOrders } from "./Hooks/useOrders";
 import {useAuthentication} from "./Hooks/useAuthentication";
 
-const database = window.firebase.database();
-const refTest = database.ref('testObj').push();
-refTest.set({
-  hello: 'guys'
-});
+
 
 function App() {
   const openFood = useOpenFood();
