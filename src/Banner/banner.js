@@ -8,6 +8,8 @@ height: 200px;
 background-image: url(img/Banner.jpeg);
 background-position: center;
 background-size: cover;
+padding: 50px;
+margin-bottom: 50px;
 
 `;
 
@@ -15,12 +17,13 @@ const BannerName = styled(Title)`
 font-size: 100px;
 color: white;
 text-shadow: 1px 1px 4px black;
-bottom: 0px;
+padding: 30px;
+text-align: center;
 `;
 
 export function Banner() {
     return <BannerStyled>
-        {/* <BannerName>Noi's Kitchen</BannerName> */}
+        <BannerName>Noi's Kitchen</BannerName>
             
     </BannerStyled>;
 }

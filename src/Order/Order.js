@@ -42,7 +42,7 @@ const OrderItem = styled.div`
   justify-content: space-between;
 `;
 
-export function Order({ orders, setOrders}) {
+export function Order({ orders, setOrders, loggedIn, login}) {
   const total = orders.reduce((total, order) => {
     return total + getPrice(order);
   }, 0);
@@ -96,7 +96,13 @@ export function Order({ orders, setOrders}) {
         </OrderContent>
       )}
       <DialogFooter>
-        <ConfirmButton>Checkout</ConfirmButton>
+        <ConfirmButton  onClick={() => {
+          if (loggedIn) {
+            console.log('logged in')
+          } else {
+            login();
+          }
+          }}>Checkout</ConfirmButton>
       </DialogFooter>
     </OrderStyled>
   );
