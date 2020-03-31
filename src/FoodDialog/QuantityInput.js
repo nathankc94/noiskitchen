@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { menuGray } from "../Style/Colors";
+import { Title } from "../Styles/title";
 const QuantityInputStyled = styled.input`
   font-size: 18px;
   width: 24px;
@@ -9,7 +10,7 @@ const QuantityInputStyled = styled.input`
   outline: none;
 `;
 
-const IncrementContainer = styled.div`
+const IncrementContainer = styled(Title)`
   display: flex;
   height: 24px;
 `;
