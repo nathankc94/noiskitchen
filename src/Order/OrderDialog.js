@@ -6,9 +6,9 @@ export function OrderDialog({openOrderDialog, setOpenOrderDialog, setOrders}){
       <DialogShadow/>
       <Dialog>
         <DialogContent>
-          <h2>🚚 Your order is on the way! </h2>
+          <h2>Thank you!</h2>
           <p>
-            You have been emailed confirmation of your order. Thanks for choosing Sliceline.
+            You have been emailed confirmation of your order. Thanks for choosing Noi's Kitchen.
           </p>
         </DialogContent>
         <DialogFooter>
