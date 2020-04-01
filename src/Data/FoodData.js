@@ -14,12 +14,6 @@ export const foodItems = [
         price: 5
     },
     {
-        name: 'Rangoons 8pc',
-        img: '/img/rangoon.jpg',
-        section: 'APPETIZERS & SIDES',
-        price: 5
-    },
-    {
         name: 'Steamed Dumplings (Pork & Shrimp) 5pc',
         img: '/img/Shumai.jpg',
         section: 'APPETIZERS & SIDES',
