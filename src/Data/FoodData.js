@@ -9,13 +9,13 @@ export const foodItems = [
     
     {
         name: 'Pork Egg Rolls 5pc',
-        img: 'https://steamykitchen.com/wp-content/uploads/2011/01/mothers-famous-chinese-egg-rolls-recipe-small.jpg',
+        img: '/img/eggroll.jpg',
         section: 'APPETIZERS & SIDES',
         price: 5
     },
     {
         name: 'Rangoons 8pc',
-        img: 'https://dinnerthendessert.com/wp-content/uploads/2018/04/Crab-Rangoon-2.jpg',
+        img: '/img/rangoon.jpg',
         section: 'APPETIZERS & SIDES',
         price: 5
     },
