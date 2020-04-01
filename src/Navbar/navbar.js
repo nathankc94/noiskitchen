@@ -1,26 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { menuGray } from "../Style/Colors";
+// import { menuGray } from "../Style/Colors";
 import { Title } from "../Style/Title";
 
-const NavbarStyled = styled.div`
-  background-color: ${menuGray};
-  padding: 12px;
-  position: fixed;
-  width: 100%;
-  z-index: 999;
-  display: flex;
-  justify-content: space-between;
-`;
+// const NavbarStyled = styled.div`
+//   z-index: 999;
+// `;
 const Logo = styled(Title)`
-  font-size: 20px;
+  font-size: 22px;
   color: white;
   text-shadow: 1px 1px 4px black;
 `;
-const UserStatus = styled.div`
+const UserStatus = styled(Title)`
   color: white;
-  font-size: 20px;
-  margin-right: 30px;
+  font-size: 17px;
+  margin-right: 5px;
+  text-shadow: 1px 1px 4px black;
 `;
 const LoginButton = styled.span`
   cursor: pointer;
@@ -37,12 +32,12 @@ const LoginButton = styled.span`
 
 export function Navbar({ login, loggedIn, logout }) {
   return (
-    <NavbarStyled>
+    <nav className='navbar navbar-light bg-danger sticky-top'>
       <Logo>Noi's Kitchen</Logo>
       <UserStatus>
         {loggedIn !== "loading" ? (
           <>
-            {loggedIn ? `Hello ${loggedIn.displayName}` : ""}
+            {loggedIn ? `Hi ${loggedIn.displayName}` : ""}
             {loggedIn ? (
                <LoginButton onClick={logout}> | Log out</LoginButton>
             ) : (
@@ -53,6 +48,6 @@ export function Navbar({ login, loggedIn, logout }) {
           "Loading..."
         )}
       </UserStatus>
-    </NavbarStyled>
+    </nav>
   );
 }

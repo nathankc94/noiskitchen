@@ -10,6 +10,7 @@ import { useOrders } from "./Hooks/useOrders";
 import {useAuthentication} from "./Hooks/useAuthentication";
 import {OrderDialog} from "./Order/OrderDialog";
 import {useOrderDialog} from "./Hooks/useOrderDialog";
+import { Cart } from "./Cart/Cart";
 
 
 
@@ -28,6 +29,7 @@ function App() {
     <Order {...orders} {...auth} {...orderDialog}/>
     <Banner/>
     <Menu {...openFood}/>
+    <Cart />
    </>
   );
 }

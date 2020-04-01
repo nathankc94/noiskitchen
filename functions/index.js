@@ -61,8 +61,8 @@ function sendOrderEmail(order) {
             `
             )
             .join("")}
-            
             </table>
+            <div><p>Pick up at 14754 S. Murray Lane, Olathe 66062</p></div>
             `
         };
   mailTransport.sendMail(mailOptions);
