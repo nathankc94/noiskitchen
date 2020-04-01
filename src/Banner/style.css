@@ -1,0 +1,28 @@
+.display-2 {
+    font-family: 'Lobster', cursive;
+    text-shadow: 1px 1px 4px black;
+    text-align: center;
+    color: white;
+}
+.jumbotron {
+    background-image: url(../Photo/Banner.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+/* 
+export const BannerStyled = styled.div`
+height: 200px;
+padding: 50px;
+margin-bottom: 50px;
+
+`;
+
+// 
+// padding: 30px;
+const BannerName = styled(Title)`
+color: white;
+
+`; */

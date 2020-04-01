@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 
 const CartStyled = styled.div`
-
 bottom: 1rem;
 align-self: flex-end;
 margin: 5px;

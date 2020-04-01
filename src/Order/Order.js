@@ -1,10 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-import {
-  DialogContent,
-  DialogFooter,
-  ConfirmButton
-} from "../FoodDialog/FoodDialog";
 import { formatPrice } from "../Data/FoodData";
 import { getPrice } from "../FoodDialog/FoodDialog";
 const database = window.firebase.database();
@@ -72,29 +66,7 @@ function sendOrder(orders, { email, displayName }) {
     displayName
   });
 }
-// export function Order() {
-//   return (
-//     <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-//   <div class="modal-dialog modal-dialog-scrollable" role="document">
-//     <div class="modal-content">
-//       <div class="modal-header">
-//         <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
-//         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-//           <span aria-hidden="true">&times;</span>
-//         </button>
-//       </div>
-//       <div class="modal-body">
-//         ...
-//       </div>
-//       <div class="modal-footer">
-//         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-//         <button type="button" class="btn btn-primary">Save changes</button>
-//       </div>
-//     </div>
-//   </div>
-// </div>
-//   )
-// }
+
 
 export function Order({
   orders,
@@ -117,7 +89,7 @@ export function Order({
     <div
       className="modal fade"
       id="exampleModalScrollable"
-      tabindex="-1"
+      tabIndex="-1"
       role="dialog"
       aria-labelledby="exampleModalScrollableTitle"
       aria-hidden="true"
@@ -170,7 +142,7 @@ export function Order({
               </div>
             </div>
           )}
-          <div class="modal-footer">
+          <div className="modal-footer">
             <div className="mt-3">
               <h5>Total: {formatPrice(total)}</h5>
             </div>
