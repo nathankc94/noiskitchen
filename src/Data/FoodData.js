@@ -9,13 +9,13 @@ export const foodItems = [
     
     {
         name: 'Pork Egg Rolls 5pc',
-        img: '/img/Eggroll.jpg',
+        img: '/img/eggroll.jpg',
         section: 'APPETIZERS & SIDES',
         price: 5
     },
     {
         name: 'Rangoons 8pc',
-        img: '/img/Rangoon.jpg',
+        img: '/img/rangoon.jpg',
         section: 'APPETIZERS & SIDES',
         price: 5
     },
