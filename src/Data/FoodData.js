@@ -133,7 +133,7 @@ export const foodItems = [
         description: 'Grilled Thai steak salad with sticky rice.'
     },
     {
-        name: 'Grilled Thai Pork Ribs with Sticky Rice',
+        name: 'Grilled Thai Pork Ribs',
         img: '/img/Ribs.png',
         section: 'GRILLED',
         price: 12,

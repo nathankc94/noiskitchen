@@ -12,15 +12,15 @@ import { Spices } from "../FoodDialog/HowSpicy";
 import { useSpice } from "../Hooks/useSpice";
 
 
+// width: 500px;
+// left: calc(50% - 250px);
+// display: flex;
 export const Dialog = styled.div`
-  width: 430px;
   background-color: white;
   position: fixed;
   top: 75px;
   z-index: 11;
   max-height: calc(100% - 100px);
-  left: calc(50% - 200px);
-  display: flex;
   flex-direction: column;
 `;
 
@@ -35,9 +35,9 @@ export const DialogContent = styled.div`
 export const DialogFooter = styled.div`
   box-shadow: 0px -2px 10px 0px gray;
   height: 60px;
-  display: flex;
   justify-content: center;
-`;
+  display: flex;
+  `;
 
 export const ConfirmButton = styled.div`
   margin: 10px;
@@ -129,7 +129,7 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
   return (
     <>
       <DialogShadow onClick={close} />
-      <Dialog>
+      <Dialog className="container-fluid">
         <DialogBanner img={openFood.img}>
           <DialogBannerName>{openFood.name}</DialogBannerName>
         </DialogBanner>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css"
+import "./style.css";
 import { formatPrice } from "../Data/FoodData";
 import { getPrice } from "../FoodDialog/FoodDialog";
 const database = window.firebase.database();
@@ -67,7 +67,6 @@ function sendOrder(orders, { email, displayName }) {
   });
 }
 
-
 export function Order({
   orders,
   setOrders,
@@ -87,7 +86,7 @@ export function Order({
 
   return (
     <div
-      className="modal fade"
+      className="modal fade modalClose"
       id="exampleModalScrollable"
       tabIndex="-1"
       role="dialog"
@@ -96,58 +95,52 @@ export function Order({
     >
       <div className="modal-dialog modal-dialog-scrollable" role="document">
         <div className="modal-content">
-          {orders.length === 0 ? (
-            <h4 className="text-center m-5">Your order is empty.</h4>
-          ) : (
-            <div>
-              <div className="modal-header">
-                <h3 className="modal-title" id="exampleModalScrollableTitle">
-                  Your Order
-                </h3>
-                <button
-                  type="button"
-                  className="close"
-                  data-Dismiss="modal"
-                  aria-Label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div className="modal-body">
-                {orders.map((order, index) => (
-                  <div className="container orderDT">
-                    <div className="row">
-                      <div className="col-6">
-                        {order.name}
-                        {order.choice && <i>-{order.choice}</i>}
-                        {order.spice && <i>-{order.spice}</i>}
-                      </div>
-                      <div className="col-2">{order.quantity}X</div>
-                      <div className="col-2">
-                        {formatPrice(getPrice(order))}
-                      </div>
-                      <div
-                        className="col-2"
-                        style={{ cursor: "pointer" }}
-                        onClick={e => {
-                          e.stopPropagation();
-                          deleteItem(index);
-                        }}
-                      >
-                        🗑
-                      </div>
+          
+            <div className="modal-header">
+              <h3 className="modal-title" id="exampleModalScrollableTitle">
+                Your Order
+              </h3>
+              <button
+                type="button"
+                className="close"
+                data-Dismiss="modal"
+                aria-Label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div className="modal-body">
+              {orders.map((order, index) => (
+                <div className="container orderDT">
+                  <div className="row">
+                    <div className="col-6">
+                      {order.name}
+                      {order.choice && <i>-{order.choice}</i>}
+                      {order.spice && <i>-{order.spice}</i>}
+                    </div>
+                    <div className="col-2">{order.quantity}X</div>
+                    <div className="col-2">{formatPrice(getPrice(order))}</div>
+                    <div
+                      className="col-2"
+                      style={{ cursor: "pointer" }}
+                      onClick={e => {
+                        e.stopPropagation();
+                        deleteItem(index);
+                      }}
+                    >
+                      🗑
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          )}
+          
           <div className="modal-footer">
             <div className="mt-3">
               <h5>Total: {formatPrice(total)}</h5>
             </div>
             {orders.length > 0 && (
-              <div>
+              
                 <div
                   className="btn btn-success"
                   onClick={() => {
@@ -158,13 +151,15 @@ export function Order({
                       login();
                     }
                   }}
+                  data-Dismiss="modal"
                 >
                   Checkout
                 </div>
-              </div>
+             
             )}
           </div>
         </div>
+
       </div>
     </div>
   );

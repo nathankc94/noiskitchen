@@ -36,7 +36,7 @@ function sendOrderEmail(order) {
       <tr>
       <th>${order.displayName}</th>
       <br/>
-      <th>You ordered some food, here's confirmation of that order. </th>
+      <th>Order Summary </th>
       </tr>
       ${order.order
         .map(
