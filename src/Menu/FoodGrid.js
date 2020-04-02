@@ -11,7 +11,7 @@ export const  FoodLabel = styled.div`
 font-size: 30px;
 position: absolute;
 background-color: rgba( 255,  255,  255, .8);
-padding 5px;
+padding 10px;
 border-radius: 7px;
 `
 

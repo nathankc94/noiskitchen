@@ -32,7 +32,8 @@ export const foodItems = [
         name: 'Sticky Rice',
         img: '/img/Stickyrice.jpg',
         section: 'APPETIZERS & SIDES',
-        price: 2
+        price: 2,
+        description: 'Thai sticky rice'
     },
     {
         name: 'Pad Thai',
@@ -122,14 +123,14 @@ export const foodItems = [
         section: 'THAI MEAT SALAD',
         price: 12,
         spices: ['Medium', 'Hot', 'Thai Hot'],
-        description: 'Grilled thai steak salad with sticky rice.'
+        description: 'Grilled Thai steak salad with sticky rice.'
     },
     {
         name: 'Grilled Thai Pork Ribs with Sticky Rice',
         img: '/img/Ribs.png',
         section: 'GRILLED',
         price: 12,
-        description: 'Grilled thai pork ribs with sticky rice (hot sauce on the side).'
+        description: 'Grilled Thai pork ribs with sticky rice (hot sauce on the side).'
     },
     {
         name: 'Coconut Soup w/Chicken',

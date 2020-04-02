@@ -4,6 +4,7 @@ import { foods } from "../Data/FoodData";
 // import { Food, FoodGrid, FoodLabel } from "./FoodGrid";
 import { formatPrice } from "../Data/FoodData";
 import "./style.css"
+
 const MenuStyled = styled.div`
 color: black;
 `;

@@ -42,7 +42,7 @@ export const DialogFooter = styled.div`
 export const ConfirmButton = styled.div`
   margin: 10px;
   color: white;
-  height: 20px;
+  
   width: 200px;
   border-radius: 5px;
   padding: 10px;
@@ -77,8 +77,8 @@ const DialogBanner = styled.div`
 `;
 
 const DialogBannerName = styled(FoodLabel)`
-  top: 100px;
-  font-size: 30px;
+  top: 150px;
+  font-size: 25px;
   padding: 5px 40px;
 `;
 
@@ -122,7 +122,10 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
     setOrders([...orders, order]);
     close();
   }
-
+  function hasDescription (openFood){
+    if (!openFood.description) return null
+    return (openFood)
+  }
   return (
     <>
       <DialogShadow onClick={close} />
@@ -131,14 +134,20 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
           <DialogBannerName>{openFood.name}</DialogBannerName>
         </DialogBanner>
         <DialogContent>
-          <QuantityInput quantity={quantity} />
+        {hasDescription(openFood) && (
+            <>
+              <p> {openFood.description} </p>
+            </>
+          )}
 
           {openFood.choices && (
             <Choices openFood={openFood} choiceRadio={choiceRadio} />
-          )}
+            )}
           {openFood.spices && (
             <Spices openFood={openFood} spiceRadio={spiceRadio} />
-          )}
+            )}
+            
+            <QuantityInput quantity={quantity} />
         </DialogContent>
         <DialogFooter>
           <ConfirmButton onClick={addToOrder} disabled={openFood.choices && !choiceRadio.value}>

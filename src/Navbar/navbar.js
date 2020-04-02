@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import { menuGray } from "../Style/Colors";
+import "./style.css"
 import { Title } from "../Style/Title";
 
 // const NavbarStyled = styled.div`
@@ -32,7 +32,7 @@ const LoginButton = styled.span`
 
 export function Navbar({ login, loggedIn, logout }) {
   return (
-    <nav className='navbar navbar-light bg-danger sticky-top'>
+    <nav className='navbar navbar-light sticky-top'>
       <Logo>Noi's Kitchen</Logo>
       <UserStatus>
         {loggedIn !== "loading" ? (

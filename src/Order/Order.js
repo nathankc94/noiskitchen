@@ -1,8 +1,8 @@
 import React from "react";
+import "./style.css"
 import { formatPrice } from "../Data/FoodData";
 import { getPrice } from "../FoodDialog/FoodDialog";
 const database = window.firebase.database();
-
 // const OrderStyled = styled.div`
 //   position: fixed;
 //   right: 0px;
@@ -115,7 +115,7 @@ export function Order({
               </div>
               <div className="modal-body">
                 {orders.map((order, index) => (
-                  <div className="container">
+                  <div className="container orderDT">
                     <div className="row">
                       <div className="col-6">
                         {order.name}
