@@ -13,13 +13,13 @@ import { useSpice } from "../Hooks/useSpice";
 
 
 export const Dialog = styled.div`
-  width: 500px;
+  width: 430px;
   background-color: white;
   position: fixed;
   top: 75px;
   z-index: 11;
   max-height: calc(100% - 100px);
-  left: calc(50% - 250px);
+  left: calc(50% - 200px);
   display: flex;
   flex-direction: column;
 `;
