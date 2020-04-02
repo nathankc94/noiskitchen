@@ -16,7 +16,7 @@ export const foodItems = [
     },
     {
         name: 'Rangoons',
-        img: '/img/Rangoon.jpg',
+        img: '/img/Rangoon.jpeg',
         section: 'APPETIZERS & SIDES',
         price: 5,
         description: 'Rangoons (8 pieces).'
@@ -66,6 +66,13 @@ export const foodItems = [
         section: 'STIR-FRY',
         price: 9,
         choices: ['Chicken', 'Pork', 'Beef'],
+        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
+    },
+    {
+        name: 'Shrimp Thai Fried Rice',
+        img: '/img/Sfriedrice.jpg',
+        section: 'STIR-FRY',
+        price: 10,
         spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
     },
     {

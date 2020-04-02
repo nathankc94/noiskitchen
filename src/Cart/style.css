@@ -3,5 +3,10 @@
     position: sticky;
     bottom: 1rem;
     align-self: flex-end;
+    
    
+}
+
+.btn-light {
+    background-color: rgba( 255,  255,  255, .8);
 }
