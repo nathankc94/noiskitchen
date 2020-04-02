@@ -1,18 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-
-
-const CartStyled = styled.div`
-bottom: 1rem;
-align-self: flex-end;
-margin: 5px;
-`;
-
+import React from "react";
+// import styled from "styled-components";
+import "./style.css";
 
 export function Cart() {
-    return <CartStyled className="text-right fixed-bottom">
-    <button type="button" className="btn" data-toggle="modal" data-target="#exampleModalScrollable">
-    <i className="fas fa-cart-plus fa-4x "></i>
-</button>   
-    </CartStyled>;
+  return (
+    <h1 className="text-right bbb"><button
+        type="button"
+        className="btn btn-light p-3 rounded-circle  m-3  "
+        data-toggle="modal"
+        data-target="#exampleModalScrollable"
+      >
+        <i className="fas fa-cart-plus fa-3x "></i>
+      </button> </h1>
+     
+  );
 }

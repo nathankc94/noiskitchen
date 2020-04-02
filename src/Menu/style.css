@@ -1,0 +1,28 @@
+.card {
+    /* width: 18px; */
+    margin: 5px;
+    cursor: pointer;
+}
+
+img {
+    width: 20px;
+    height: 200px;
+   
+}
+
+.priceImg {
+font-size: 20px;
+position: absolute;
+left: 72%;
+background-color: rgba( 255,  255,  255, .8);
+padding: 4px;
+border-radius: 7px;
+}
+
+.foodContainer {
+    background-color: rgb(255, 255, 255);
+}
+
+.card-body {
+    background-color: rgb(255, 255, 255);
+}

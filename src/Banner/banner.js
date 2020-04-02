@@ -1,6 +1,5 @@
 import React from 'react';
-import "./style.css"
-import { Title } from "../Style/Title";
+import "./style.css";
 
 
 export function Banner() {

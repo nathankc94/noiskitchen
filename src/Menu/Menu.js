@@ -1,37 +1,40 @@
 import React from "react";
 import styled from "styled-components";
 import { foods } from "../Data/FoodData";
-import { Food, FoodGrid, FoodLabel } from "./FoodGrid";
+// import { Food, FoodGrid, FoodLabel } from "./FoodGrid";
 import { formatPrice } from "../Data/FoodData";
-
+import "./style.css"
 const MenuStyled = styled.div`
-  height: 1000px;
-  margin: 0px 400px 50px 20px;
+color: black;
 `;
 
 export function Menu({ setOpenFood }) {
   return (
-    <MenuStyled>
+    <MenuStyled >
       {Object.entries(foods).map(([sectionName, foods]) => (
-        <>
-          <h1>{sectionName}</h1>
+        <div className="container foodContainer">
+           
+            
+          <h1 className="pt-5 pl-3 font-weight-bolder border-bottom border-dark">{sectionName}</h1>
 
-          <FoodGrid>
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4">
             {foods.map(food => (
-              <Food
-                img={food.img}
+              <div
+                
                 onClick={() => {
                   setOpenFood(food);
                 }}
+                className="card rounded col border-0"
               >
-                <FoodLabel>
-                  <div>{food.name}</div>
-                  <div>{formatPrice(food.price)}</div>
-                </FoodLabel>
-              </Food>
+                <img src={food.img} class="card-img-top rounded" alt="img"></img>
+                <div className="card-img-overlay"><p className="priceImg">{formatPrice(food.price)}</p></div>
+                <div className="card-body">
+                  <h5 className="text-center font-weight-bolder border-bottom">{food.name}</h5>
+                </div>
+              </div>
             ))}
-          </FoodGrid>
-        </>
+          </div>
+        </div>
       ))}
     </MenuStyled>
   );

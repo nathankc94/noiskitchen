@@ -11,7 +11,7 @@ import {useAuthentication} from "./Hooks/useAuthentication";
 import {OrderDialog} from "./Order/OrderDialog";
 import {useOrderDialog} from "./Hooks/useOrderDialog";
 import { Cart } from "./Cart/Cart";
-
+import { Footer } from "./Footer/Footer";
 
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
     <Banner/>
     <Menu {...openFood}/>
     <Cart />
+    <Footer />
    </>
   );
 }

@@ -8,22 +8,25 @@ export function formatPrice(price) {
 export const foodItems = [
     
     {
-        name: 'Pork Egg Rolls 5pc',
+        name: 'Egg Rolls',
         img: '/img/Eggroll.jpg',
         section: 'APPETIZERS & SIDES',
-        price: 5
+        price: 5,
+        description: 'Pork egg rolls (5 pieces).'
     },
     {
-        name: 'Rangoons 8pc',
+        name: 'Rangoons',
         img: '/img/Rangoon.jpg',
         section: 'APPETIZERS & SIDES',
-        price: 5
+        price: 5,
+        description: 'Rangoons (8 pieces).'
     },
     {
-        name: 'Steamed Dumplings (Pork & Shrimp) 5pc',
+        name: 'Steamed Dumplings',
         img: '/img/Shumai.jpg',
         section: 'APPETIZERS & SIDES',
-        price: 5
+        price: 5,
+        description: 'Steamed dumplings made with pork and shrimp (5 pieces).'
     },
     {
         name: 'Sticky Rice',
@@ -97,44 +100,51 @@ export const foodItems = [
         spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
     },
     {
-        name: 'Chicken Laab w/Sticky Rice',
+        name: 'Chicken Laab',
         img: '/img/Laab.png',
         section: 'THAI MEAT SALAD',
         price: 10,
-        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
+        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot'],
+        description: 'Chicken laab with sticky rice.'
     },
     {
-        name: 'Pork Laab w/Sticky Rice',
+        name: 'Pork Laab',
         img: '/img/Laab.png',
         section: 'THAI MEAT SALAD',
         price: 10,
-        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
+        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot'],
+        description: 'Pork laab with sticky rice.'
+
     },
     {
-        name: 'Grilled Thai Steak Salad w/Sticky Rice',
+        name: 'Grilled Steak Salad',
         img: '/img/Namtok.jpg',
         section: 'THAI MEAT SALAD',
         price: 12,
-        spices: ['Medium', 'Hot', 'Thai Hot']
+        spices: ['Medium', 'Hot', 'Thai Hot'],
+        description: 'Grilled thai steak salad with sticky rice.'
     },
     {
-        name: 'Grilled Thai Pork Ribs w/Sticky Rice',
+        name: 'Grilled Thai Pork Ribs with Sticky Rice',
         img: '/img/Ribs.png',
         section: 'GRILLED',
-        price: 12
+        price: 12,
+        description: 'Grilled thai pork ribs with sticky rice (hot sauce on the side).'
     },
     {
-        name: 'Thai Coconut Soup w/Chicken',
+        name: 'Coconut Soup w/Chicken',
         img: '/img/Tomkha.jpg',
         section: 'SOUP',
         price: 9,
-        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
+        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot'],
+        description: 'Thai coconut soup with chicken.'
     },
     {
-        name: 'Thai Beef Noodle Soup w/Meatballs',
+        name: 'Beef Noodle Soup',
         img: '/img/Beefsoup.jpg',
         section: 'SOUP',
-        price: 9
+        price: 9,
+        description: 'Thai beef noodle soup with meatballs (***only take this order with 5 orders or more).'
     },
 ];
 
