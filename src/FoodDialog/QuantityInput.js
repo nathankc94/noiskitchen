@@ -8,21 +8,26 @@ const QuantityInputStyled = styled.input`
   border: none;
   border: 1px solid gray;
   text-align: center;
+  margin-top: 5px;
+ 
   `;
   // outline: none;
 
 const IncrementContainer = styled(Title)`
   display: flex;
-  height: 30px;
+  height: 27px;
+  margin-top: 5px;
 `;
 const IncrementButton = styled.div`
   width: 23px;
+ 
   color: ${menuGray};
   font-size: 20px;
   text-align: center;
   cursor: pointer;
-  line-height: 23px;
+  line-height: 20px;
   margin: 0px 5px;
+  margin-top: 5px;
   border: 1px solid ${menuGray};
   ${({ disabled }) =>
     disabled &&
@@ -37,7 +42,7 @@ const IncrementButton = styled.div`
 export function QuantityInput({ quantity }) {
   return (
     <IncrementContainer>
-      <div>Quantity:</div>
+      <h3>Quantity:</h3>
       <IncrementButton
         onClick={() => {
           quantity.setValue(quantity.value - 1);

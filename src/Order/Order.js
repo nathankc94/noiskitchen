@@ -116,8 +116,8 @@ export function Order({
                   <div className="row">
                     <div className="col-6">
                       {order.name}
-                      {order.choice && <i>{order.choice}</i>}
-                      {order.spice && <i>{order.spice}</i>}
+                      {order.choice && <i> {order.choice}</i>}
+                      {order.spice && <i> {order.spice}</i>}
                     </div>
                     <div className="col-2">{order.quantity}X</div>
                     <div className="col-2">{formatPrice(getPrice(order))}</div>

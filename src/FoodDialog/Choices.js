@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const CursorPointer = `cursor: pointer`;
 
 const RadioInput = styled.input`
-  ${CursorPointer}
+cursor: pointer;
+margin: 3px
 `;
 
 const Label = styled.label`
-  ${CursorPointer}
+cursor: pointer;
+margin: 3px
 `;
 
 export function Choices({ openFood, choiceRadio }) {

@@ -48,8 +48,8 @@ export const foodItems = [
         img: '/img/Padthai.jpg',
         section: 'STIR-FRY',
         price: 9,
-        choices: ['Chicken', 'Pork', 'Beef'],
-        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
+        choices: ['chicken', 'pork', 'beef'],
+        spices: ['mild', 'medium', 'hot', 'thai-hot']
 
     },
     {
@@ -58,7 +58,7 @@ export const foodItems = [
         section: 'STIR-FRY',
         price: 10,
         choice:' ',
-        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
+        spices: ['mild', 'medium', 'hot', 'thai-hot']
         
     },
     {
@@ -66,16 +66,16 @@ export const foodItems = [
         img: '/img/Grapow.jpg',
         section: 'STIR-FRY',
         price: 9,
-        choices: ['Chicken', 'Pork', 'Beef'],
-        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
+        choices: ['chicken', 'pork', 'beef'],
+        spices: ['mild', 'medium', 'hot', 'thai-hot']
     },
     {
         name: 'Thai Fried Rice',
         img: '/img/Friedrice.jpg',
         section: 'STIR-FRY',
         price: 9,
-        choices: ['Chicken', 'Pork', 'Beef'],
-        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
+        choices: ['chicken', 'pork', 'beef'],
+        spices: ['mild', 'medium', 'hot', 'thai-hot']
     },
     {
         name: 'Shrimp Thai Fried Rice',
@@ -83,40 +83,39 @@ export const foodItems = [
         section: 'STIR-FRY',
         price: 10,
         choice:' ',
-        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
+        spices: ['mild', 'medium', 'hot', 'thai-hot']
     },
     {
         name: 'Tom Yum Fried Rice',
         img: '/img/Tomyumfriedrice.jpg',
         section: 'STIR-FRY',
         price: 9,
-        choices: ['Chicken', 'Pork', 'Beef'],
-        spices: ['Medium', 'Hot', 'Thai Hot']
+        choices: ['chicken', 'pork', 'beef'],
+        spices: ['medium', 'hot', 'thai-hot']
     },
     {
         name: 'Green Curry Fried Rice',
         img: '/img/Greenfriedrice.jpg',
         section: 'STIR-FRY',
         price: 9,
-        choices: ['Chicken', 'Pork', 'Beef'],
-        spices: ['Medium', 'Hot', 'Thai Hot'],
-        description: 'Thai green curry fried rice'
+        choices: ['chicken', 'pork', 'beef'],
+        spices: ['medium', 'hot', 'thai-hot']
     },
     {
         name: 'Green Curry',
         img: '/img/Greencurry.jpg',
         section: 'CURRY',
         price: 9,
-        choices: ['Chicken', 'Pork', 'Beef'],
-        spices: ['Medium', 'Hot', 'Thai Hot']
+        choices: ['chicken', 'pork', 'beef'],
+        spices: ['medium', 'hot', 'thai-hot']
     },
     {
         name: 'Panang',
         img: '/img/Panang.jpg',
         section: 'CURRY',
         price: 9,
-        choices: ['Chicken', 'Pork', 'Beef'],
-        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
+        choices: ['chicken', 'pork', 'beef'],
+        spices: ['mild', 'medium', 'hot', 'thai-hot']
     },
     {
         name: 'Chicken Laab',
@@ -124,7 +123,7 @@ export const foodItems = [
         section: 'THAI MEAT SALAD',
         price: 10,
         choice:' ',
-        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot'],
+        spices: ['mild', 'medium', 'hot', 'thai-hot'],
         description: 'Chicken laab with sticky rice.'
     },
     {
@@ -133,7 +132,7 @@ export const foodItems = [
         section: 'THAI MEAT SALAD',
         price: 10,
         choice:' ',
-        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot'],
+        spices: ['mild', 'medium', 'hot', 'thai-hot'],
         description: 'Pork laab with sticky rice.'
 
     },
@@ -143,7 +142,7 @@ export const foodItems = [
         section: 'THAI MEAT SALAD',
         price: 12,
         choice: ' ',
-        spices: ['Medium', 'Hot', 'Thai Hot'],
+        spices: ['medium', 'hot', 'thai-hot'],
         description: 'Grilled Thai steak salad with sticky rice.'
     },
     {
@@ -161,7 +160,7 @@ export const foodItems = [
         section: 'SOUP',
         price: 9,
         choice:' ',
-        spices: ['Mild', 'Medium', 'Hot', 'Thai Hot'],
+        spices: ['mild', 'medium', 'hot', 'thai-hot'],
         description: 'Thai coconut soup with chicken.'
     },
     {
