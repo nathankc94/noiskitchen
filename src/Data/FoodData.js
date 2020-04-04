@@ -99,7 +99,8 @@ export const foodItems = [
         section: 'STIR-FRY',
         price: 9,
         choices: ['Chicken', 'Pork', 'Beef'],
-        spices: ['Medium', 'Hot', 'Thai Hot']
+        spices: ['Medium', 'Hot', 'Thai Hot'],
+        description: 'Thai green curry fried rice'
     },
     {
         name: 'Green Curry',

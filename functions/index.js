@@ -62,7 +62,7 @@ function sendOrderEmail(order) {
             <td style="border: 1px solid black; text-align: center;">
             ${spice}
             </td>  
-            <tdstyle="border: 1px solid black; text-align: center;">
+            <td style="border: 1px solid black; text-align: center;">
             ${quantity}X
             </td>       
             <td style="border: 1px solid black; text-align: center;">
