@@ -8,8 +8,8 @@ const mailTransport = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: email,
-    pass: password
-  }
+    pass: password,
+  },
 });
 
 mailTransport.use("compile", htmlToText());
@@ -18,52 +18,70 @@ const APP_NAME = "Noi's kitchen";
 
 exports.sendUserEmail = functions.database
   .ref("/orders/{pushId}")
-  .onCreate(order => {
+  .onCreate((order) => {
     sendOrderEmail(order.val());
   });
 
 function sendOrderEmail(order) {
   let maillist = [order.email, email];
 
-  
-  
+  // function getSpice(order) {
+  //   if (!order.spice) return null;
+  //   return order.spice;
+  // }
+  let cartTotal = 0;
+  order.order.forEach(cartItem => {
+  cartTotal = cartTotal+ (cartItem.quantity * cartItem.price);
+  });
+
   const mailOptions = {
-      from: `${APP_NAME} <noreply@noiskitchen.com`,
-      to: maillist,
-      subject: `Your order from ${APP_NAME}.`,
-      html: `
-      <<table style="width:500px; margin: auto"> 
+    from: `${APP_NAME}`,
+    to: maillist,
+    subject: `Your order summary from ${APP_NAME}.`,
+    html: `
+      <h1>Order Summary </h1>
+      <table style="border: 1px solid black;
+      text-align: center; border-collapse: collapse;"> 
       <tr>
-      <th>${order.displayName}</th>
-      <br/>
-      <th>Order Summary </th>
-      </tr>
+          <th style="border: 1px solid black; text-align: center;">Name</th>
+          <th style="border: 1px solid black; text-align: center;">Protein</th>
+          <th style="border: 1px solid black; text-align: center;">Spice</th>
+          <th style="border: 1px solid black; text-align: center;">Quantity</th>
+          <th style="border: 1px solid black; text-align: center;">Price</th>
+          </tr>
       ${order.order
         .map(
-            ({ name, quantity, price, choice, spice }) => `
+          ({ name, quantity, price, choice, spice }) => `
             <tr>
-            <td>
+            <td style="border: 1px solid black; text-align: center;">
             ${name}
             </td>  
-            <td>
+            <td style="border: 1px solid black; text-align: center;">
             ${choice}
             </td>  
-            <td>
+            <td style="border: 1px solid black; text-align: center;">
             ${spice}
             </td>  
-            <td>
+            <tdstyle="border: 1px solid black; text-align: center;">
             ${quantity}X
             </td>       
-            <td>
-            $${quantity*price}
+            <td style="border: 1px solid black; text-align: center;">
+            $${quantity * price}
             </td>
             </tr>
             `
-            )
-            .join("")}
+        )
+        .join("")}
             </table>
-            <div><p>Pick up at 14754 S. Murray Lane, Olathe 66062</p></div>
+            <div>
+            <h2>Your Total: $${cartTotal}</h2>
+            <p>Thank you for ordering with us ${order.displayName}.</p>
+            <p>Pick up at: 14754 S. Murray Lane, Olathe 66062</p>
+            <p>(913) 549-2229</p>
+            </div>
             `
-        };
+  };
   mailTransport.sendMail(mailOptions);
 }
+
+

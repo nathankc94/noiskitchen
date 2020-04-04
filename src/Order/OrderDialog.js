@@ -17,7 +17,7 @@ export function OrderDialog({openOrderDialog, setOpenOrderDialog, setOrders}){
             setOrders([]);
             setOpenOrderDialog();
           }}>
-            I'm still hungry
+            Close
           </ConfirmButton>
         </DialogFooter>
       </Dialog>

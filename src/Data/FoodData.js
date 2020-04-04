@@ -12,6 +12,8 @@ export const foodItems = [
         img: '/img/Eggroll.jpg',
         section: 'APPETIZERS & SIDES',
         price: 5,
+        spice: ' ',
+        choice:' ',
         description: 'Pork egg rolls (5 pieces).'
     },
     {
@@ -19,6 +21,8 @@ export const foodItems = [
         img: '/img/Rangoon.jpeg',
         section: 'APPETIZERS & SIDES',
         price: 5,
+        spice: ' ',
+        choice:' ',
         description: 'Rangoons (8 pieces).'
     },
     {
@@ -26,6 +30,8 @@ export const foodItems = [
         img: '/img/Shumai.jpg',
         section: 'APPETIZERS & SIDES',
         price: 5,
+        spice: ' ',
+        choice:' ',
         description: 'Steamed dumplings made with pork and shrimp (5 pieces).'
     },
     {
@@ -33,6 +39,8 @@ export const foodItems = [
         img: '/img/Stickyrice.jpg',
         section: 'APPETIZERS & SIDES',
         price: 2,
+        spice: ' ',
+        choice:' ',
         description: 'Thai sticky rice'
     },
     {
@@ -49,6 +57,7 @@ export const foodItems = [
         img: '/img/Shrimppt.jpg',
         section: 'STIR-FRY',
         price: 10,
+        choice:' ',
         spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
         
     },
@@ -73,6 +82,7 @@ export const foodItems = [
         img: '/img/Sfriedrice.jpg',
         section: 'STIR-FRY',
         price: 10,
+        choice:' ',
         spices: ['Mild', 'Medium', 'Hot', 'Thai Hot']
     },
     {
@@ -109,9 +119,10 @@ export const foodItems = [
     },
     {
         name: 'Chicken Laab',
-        img: '/img/Laab.png',
+        img: '/img/Laabchicken.jpg',
         section: 'THAI MEAT SALAD',
         price: 10,
+        choice:' ',
         spices: ['Mild', 'Medium', 'Hot', 'Thai Hot'],
         description: 'Chicken laab with sticky rice.'
     },
@@ -120,6 +131,7 @@ export const foodItems = [
         img: '/img/Laab.png',
         section: 'THAI MEAT SALAD',
         price: 10,
+        choice:' ',
         spices: ['Mild', 'Medium', 'Hot', 'Thai Hot'],
         description: 'Pork laab with sticky rice.'
 
@@ -129,6 +141,7 @@ export const foodItems = [
         img: '/img/Namtok.jpg',
         section: 'THAI MEAT SALAD',
         price: 12,
+        choice: ' ',
         spices: ['Medium', 'Hot', 'Thai Hot'],
         description: 'Grilled Thai steak salad with sticky rice.'
     },
@@ -137,13 +150,16 @@ export const foodItems = [
         img: '/img/Ribs.png',
         section: 'GRILLED',
         price: 12,
+        spice: ' ',
+        choice:' ',
         description: 'Grilled Thai pork ribs with sticky rice (hot sauce on the side).'
     },
     {
         name: 'Coconut Soup w/Chicken',
-        img: '/img/Tomkha.jpg',
+        img: '/img/Tomkha.png',
         section: 'SOUP',
         price: 9,
+        choice:' ',
         spices: ['Mild', 'Medium', 'Hot', 'Thai Hot'],
         description: 'Thai coconut soup with chicken.'
     },
@@ -152,6 +168,8 @@ export const foodItems = [
         img: '/img/Beefsoup.jpg',
         section: 'SOUP',
         price: 9,
+        spice: ' ',
+        choice:' ',
         description: 'Thai beef noodle soup with meatballs (***only take this order with 5 orders or more).'
     },
 ];

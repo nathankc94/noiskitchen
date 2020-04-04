@@ -40,6 +40,7 @@ const database = window.firebase.database();
 
 function sendOrder(orders, { email, displayName }) {
   var newOrderRef = database.ref("orders").push();
+  console.log("text" + orders);
   const newOrders = orders.map(order => {
     return Object.keys(order).reduce((acc, orderKey) => {
       if (!order[orderKey]) {
@@ -103,8 +104,8 @@ export function Order({
               <button
                 type="button"
                 className="close"
-                data-Dismiss="modal"
-                aria-Label="Close"
+                data-dismiss="modal"
+                aria-label="Close"
               >
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -151,7 +152,7 @@ export function Order({
                       login();
                     }
                   }}
-                  data-Dismiss="modal"
+                  data-dismiss="modal"
                 >
                   Checkout
                 </div>

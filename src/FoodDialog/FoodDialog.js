@@ -14,10 +14,10 @@ import { useSpice } from "../Hooks/useSpice";
 
 // width: 500px;
 // left: calc(50% - 250px);
-// display: flex;
 export const Dialog = styled.div`
+position: fixed;
+display: flex;
   background-color: white;
-  position: fixed;
   top: 75px;
   z-index: 11;
   max-height: calc(100% - 100px);
@@ -129,7 +129,12 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
   return (
     <>
       <DialogShadow onClick={close} />
-      <Dialog className="container-fluid">
+      <Dialog className="card">
+     
+      
+      
+      
+
         <DialogBanner img={openFood.img}>
           <DialogBannerName>{openFood.name}</DialogBannerName>
         </DialogBanner>
@@ -154,6 +159,10 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
             Add to order: {formatPrice(getPrice(order))}
           </ConfirmButton>
         </DialogFooter>
+        
+       
+        
+     
       </Dialog>
     </>
   );

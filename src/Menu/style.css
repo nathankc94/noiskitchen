@@ -1,6 +1,6 @@
 .card {
     /* width: 18px; */
-    margin: 5px;
+  
     cursor: pointer;
 }
 
@@ -11,7 +11,7 @@ img {
 }
 
 .priceImg {
-font-size: 20px;
+font-size: 15px;
 position: absolute;
 left: 72%;
 background-color: rgba( 255,  255,  255, .8);
