@@ -27,7 +27,7 @@ export function Menu({ setOpenFood }) {
                 }}
                 className="card rounded col border-0"
               >
-                <img src={food.img} className="card-img-top rounded" alt="img"></img>
+                <img src={food.img} className="card-img img-fluid rounded" alt="img"></img>
                 <div className="card-img-overlay"><p className="priceImg">{formatPrice(food.price)}</p></div>
                 <div className="card-body">
                   <h5 className="text-center font-weight-bolder border-bottom">{food.name}</h5>

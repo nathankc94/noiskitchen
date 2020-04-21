@@ -75,9 +75,12 @@ function sendOrderEmail(order) {
             </table>
             <div>
             <h2>Your Total: $${cartTotal}</h2>
-            <p>Thank you for ordering with us ${order.displayName}.</p>
-            <p>Pick up at: 14754 S. Murray Lane, Olathe 66062</p>
-            <p>(913) 549-2229</p>
+            <h3>Thank you for ordering with us ${order.displayName}.</h3>
+            <p>Pick up location: 14754 S. Murray Lane, Olathe 66062</p>
+            <p>Contact number: (913) 549-2229</p>
+            <p style="color: red">Cash or Check only (check to Bunsri Chaosan).</p>
+            <p style="color: red">Food pickup is Saturday only.</p>
+            <p style="color: red">We will send you a pickup time.</p>
             </div>
             `
   };

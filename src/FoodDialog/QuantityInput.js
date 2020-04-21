@@ -8,7 +8,7 @@ const QuantityInputStyled = styled.input`
   border: none;
   border: 1px solid gray;
   text-align: center;
-  margin-top: 5px;
+
  
   `;
   // outline: none;
@@ -16,7 +16,8 @@ const QuantityInputStyled = styled.input`
 const IncrementContainer = styled(Title)`
   display: flex;
   height: 27px;
-  margin-top: 5px;
+  
+  
 `;
 const IncrementButton = styled.div`
   width: 23px;
@@ -25,9 +26,9 @@ const IncrementButton = styled.div`
   font-size: 20px;
   text-align: center;
   cursor: pointer;
-  line-height: 20px;
+  line-height: 23px;
   margin: 0px 5px;
-  margin-top: 5px;
+
   border: 1px solid ${menuGray};
   ${({ disabled }) =>
     disabled &&

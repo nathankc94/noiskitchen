@@ -11,17 +11,36 @@ import { Choices } from "../FoodDialog/Choices";
 import { Spices } from "../FoodDialog/HowSpicy";
 import { useSpice } from "../Hooks/useSpice";
 
-
-// width: 500px;
-// left: calc(50% - 250px);
 export const Dialog = styled.div`
-position: fixed;
-display: flex;
+  width: 500px;
+  left: calc(50% - 200px);
+  position: fixed;
+  display: flex;
   background-color: white;
   top: 75px;
   z-index: 11;
   max-height: calc(100% - 100px);
   flex-direction: column;
+  @media only screen and (max-width: 1042px) {
+    /* For mobile phones: */
+    left: calc(50% - 250px);
+      width: 500px;
+  }
+  @media only screen and (max-width: 414px) {
+    /* For mobile phones: */
+    left: calc(50% - 207px);
+      width: 100%;
+  }
+  @media only screen and (max-width: 375px) {
+    /* For mobile phones: */
+    left: calc(50% - 188px);
+      width: 100%;
+  }
+  @media only screen and (max-width: 320px) {
+    /* For mobile phones: */
+    left: calc(50% - 161px);
+      width: 100%;
+  }
 `;
 
 export const DialogContent = styled.div`
@@ -37,12 +56,12 @@ export const DialogFooter = styled.div`
   height: 60px;
   justify-content: center;
   display: flex;
-  `;
+`;
 
 export const ConfirmButton = styled.div`
   margin: 10px;
   color: white;
-  
+
   width: 200px;
   border-radius: 5px;
   padding: 10px;
@@ -98,7 +117,7 @@ export function getPrice(order) {
   return (
     order.quantity *
     (order.price +
-      order.toppings.filter(t => t.checked).length * pricePerTopping)
+      order.toppings.filter((t) => t.checked).length * pricePerTopping)
   );
 }
 
@@ -116,30 +135,25 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
     quantity: quantity.value,
     toppings: toppings.toppings,
     choice: choiceRadio.value,
-    spice: spiceRadio.value
+    spice: spiceRadio.value,
   };
   function addToOrder() {
     setOrders([...orders, order]);
     close();
   }
-  function hasDescription (openFood){
-    if (!openFood.description) return null
-    return (openFood)
+  function hasDescription(openFood) {
+    if (!openFood.description) return null;
+    return openFood;
   }
   return (
     <>
       <DialogShadow onClick={close} />
       <Dialog className="card">
-     
-      
-      
-      
-
         <DialogBanner img={openFood.img}>
           <DialogBannerName>{openFood.name}</DialogBannerName>
         </DialogBanner>
         <DialogContent>
-        {hasDescription(openFood) && (
+          {hasDescription(openFood) && (
             <>
               <p> {openFood.description} </p>
             </>
@@ -147,22 +161,21 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
 
           {openFood.choices && (
             <Choices openFood={openFood} choiceRadio={choiceRadio} />
-            )}
+          )}
           {openFood.spices && (
             <Spices openFood={openFood} spiceRadio={spiceRadio} />
-            )}
-            
-            <QuantityInput quantity={quantity} />
+          )}
+
+          <QuantityInput quantity={quantity} />
         </DialogContent>
         <DialogFooter>
-          <ConfirmButton onClick={addToOrder} disabled={openFood.choices && !choiceRadio.value}>
+          <ConfirmButton
+            onClick={addToOrder}
+            disabled={openFood.choices && !choiceRadio.value}
+          >
             Add to order: {formatPrice(getPrice(order))}
           </ConfirmButton>
         </DialogFooter>
-        
-       
-        
-     
       </Dialog>
     </>
   );
