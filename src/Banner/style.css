@@ -1,8 +1,9 @@
 .display-2 {
     font-family: 'Lobster', cursive;
-    text-shadow: 1px 1px 4px black;
+    text-shadow: 3px 4px 8px black;
     text-align: center;
     color: white;
+    
 }
 .jumbotron {
     background-image: url(../Photo/Banner.jpeg);

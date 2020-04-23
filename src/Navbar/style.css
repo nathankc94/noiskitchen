@@ -1,4 +1,13 @@
 .navbar {
     background-color: rgba(0,0,0,0.8);
     backdrop-filter: saturate(180%) blur(20px);
+   
+}
+
+#logo {
+    color: white;
+}
+
+.fab {
+    margin-right: 5px;
 }

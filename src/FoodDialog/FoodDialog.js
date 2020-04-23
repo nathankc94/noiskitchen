@@ -67,7 +67,7 @@ export const ConfirmButton = styled.div`
   padding: 10px;
   text-align: center;
   cursor: pointer;
-  background-color: green;
+  background-color: #13aa6d;
   ${({ disabled }) =>
     disabled &&
     `
@@ -99,6 +99,16 @@ const DialogBannerName = styled(FoodLabel)`
   top: 150px;
   font-size: 25px;
   padding: 5px 40px;
+`;
+const DialogBannerExit = styled.span`
+  top: 5px;
+  right: 5px;
+  font-size: 18px;
+  padding: 1px 8px;
+  border-radius: 50%;
+ font-family: inherit;
+ position: absolute;
+background-color: rgba( 255,  255,  255, .8);
 `;
 
 // function hasToppings(food){
@@ -151,6 +161,7 @@ function FoodDialogContainer({ openFood, setOpenFood, setOrders, orders }) {
       <Dialog className="card">
         <DialogBanner img={openFood.img}>
           <DialogBannerName>{openFood.name}</DialogBannerName>
+          <DialogBannerExit onClick={close}><span>&times;</span></DialogBannerExit>
         </DialogBanner>
         <DialogContent>
           {hasDescription(openFood) && (

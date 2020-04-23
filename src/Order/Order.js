@@ -143,7 +143,7 @@ export function Order({
             {orders.length > 0 && (
               
                 <div
-                  className="btn btn-success"
+                  className="btn checkOut"
                   onClick={() => {
                     if (loggedIn) {
                       setOpenOrderDialog(true);
