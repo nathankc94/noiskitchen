@@ -43,6 +43,35 @@ export const foodItems = [
     description: "Thai sticky rice",
   },
   {
+    name: "Coconut Soup w/Chicken",
+    img: "/img/Tomkha.jpg",
+    section: "SOUP",
+    price: 9,
+    choice: " ",
+    spices: ["mild", "medium", "hot", "thai-hot"],
+    description: "Thai coconut soup with chicken.",
+  },
+  {
+    name: "Beef Noodle Soup",
+    img: "/img/Beefsoup.jpg",
+    section: "SOUP",
+    price: 10,
+    spice: " ",
+    choice: " ",
+    description:
+      "Thai beef noodle soup with meatballs (***only take this order with 5 orders or more).",
+  },
+  {
+    name: "Cao Lau (เกาเหลา)",
+    img: "/img/Caolau.jpg",
+    section: "SOUP",
+    price: 12,
+    spice: " ",
+    choice: " ",
+    description:
+      "Thai beef vegetable soup with meatballs (***only take this order with 5 orders or more).",
+  },
+  {
     name: "Pad Thai",
     img: "/img/Padthai.jpg",
     section: "STIR-FRY",
@@ -141,26 +170,7 @@ export const foodItems = [
     choices: ["chicken", "pork", "beef"],
     spices: ["mild", "medium", "hot", "thai-hot"],
   },
-
-  {
-    name: "Coconut Soup w/Chicken",
-    img: "/img/Tomkha.jpg",
-    section: "SOUP",
-    price: 9,
-    choice: " ",
-    spices: ["mild", "medium", "hot", "thai-hot"],
-    description: "Thai coconut soup with chicken.",
-  },
-  {
-    name: "Beef Noodle Soup",
-    img: "/img/Beefsoup.jpg",
-    section: "SOUP",
-    price: 9,
-    spice: " ",
-    choice: " ",
-    description:
-      "Thai beef noodle soup with meatballs (***only take this order with 5 orders or more).",
-  },
+  
   {
     name: "Grilled Thai Pork Ribs",
     img: "/img/Ribs.png",

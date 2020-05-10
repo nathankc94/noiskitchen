@@ -3,12 +3,21 @@
     text-shadow: 3px 4px 8px black;
     text-align: center;
     color: white;
-    
+
+}
+.ban1 {
+    font-family: serif;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 3px 4px 6px black;
+    color: white;
+    font-size: 25px;
 }
 .jumbotron {
     background-image: url(../Photo/Banner.jpeg);
     background-position: center;
     background-size: cover;
+    
 }
 
 
