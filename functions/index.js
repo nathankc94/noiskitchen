@@ -30,8 +30,8 @@ function sendOrderEmail(order) {
   //   return order.spice;
   // }
   let cartTotal = 0;
-  order.order.forEach(cartItem => {
-  cartTotal = cartTotal+ (cartItem.quantity * cartItem.price);
+  order.order.forEach((cartItem) => {
+    cartTotal = cartTotal + cartItem.quantity * cartItem.price;
   });
 
   const mailOptions = {
@@ -73,19 +73,21 @@ function sendOrderEmail(order) {
         )
         .join("")}
             </table>
-            <div>
+           
             <h2 style="text-decoration: underline;">Your Total: $${cartTotal}</h2>
             <h3>Thank you for ordering with us ${order.displayName}.</h3>
-            <p>Pick up location: 14754 S. Murray Lane, Olathe 66062</p>
-            <p>Contact number: (913) 549-2229</p>
             <p style="color: red">Cash or Check only (check to Bunsri Chaosan).</p>
             <p style="color: red">Food pickup is Saturday only.</p>
             <p style="color: red">We will send you a pickup time.</p>
-            <a style="border-radius: 4px; padding: 7px 12px; text-decoration: none; color: white; background-color: #219be9; border: solid 1px white;" target="_blank" rel="noopener noreferrer" href="https://noiskitchenkc.web.app">Order More</a>
-            </div>
-            `
+            <table style="border: 1px solid black; margin: 3px; padding:3px;"> 
+            <tr>
+                     <td>Pick up location: 14754 S. Murray Lane, Olathe 66062</td></tr>
+                      <tr>
+                    <td>Contact number: (913) 549-2229</td> </tr>
+                    <tr>
+                    <td> Visit us at:<a target="_blank" rel="noopener noreferrer" href="https://noiskitchenkc.web.app"> https://noiskitchenkc.web.app</a></td></tr>
+                       </table>
+            `,
   };
   mailTransport.sendMail(mailOptions);
 }
-
-

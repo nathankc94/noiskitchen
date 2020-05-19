@@ -7,6 +7,36 @@ export function formatPrice(price) {
 
 export const foodItems = [
   {
+    name: "Sukiyaki Noodle Soup",
+    img: "/img/sukiyaki.jpg",
+    section: "THIS WEEK'S SPECIAL",
+    price: 10,
+    spice: " ",
+    choice: " ",
+    description:
+      "Sukiyaki noodle soup with red spicy homemade sauce",
+  },
+  {
+    name: "Beef Noodle Soup",
+    img: "/img/Beefsoup.jpg",
+    section: "THIS WEEK'S SPECIAL",
+    price: 10,
+    spice: " ",
+    choice: " ",
+    description:
+      "Thai beef noodle soup with meatballs.",
+  },
+  {
+    name: "Cao Lau (เกาเหลา)",
+    img: "/img/Caolau.jpg",
+    section: "THIS WEEK'S SPECIAL",
+    price: 12,
+    spice: " ",
+    choice: " ",
+    description:
+      "Thai beef soup with vegetables and meatballs.",
+  },
+  {
     name: "Egg Rolls",
     img: "/img/Eggroll.jpg",
     section: "APPETIZERS & SIDES",
@@ -50,26 +80,6 @@ export const foodItems = [
     choice: " ",
     spices: ["mild", "medium", "hot", "thai-hot"],
     description: "Thai coconut soup with chicken.",
-  },
-  {
-    name: "Beef Noodle Soup",
-    img: "/img/Beefsoup.jpg",
-    section: "SOUP",
-    price: 10,
-    spice: " ",
-    choice: " ",
-    description:
-      "Thai beef noodle soup with meatballs (***only take this order with 5 orders or more).",
-  },
-  {
-    name: "Cao Lau (เกาเหลา)",
-    img: "/img/Caolau.jpg",
-    section: "SOUP",
-    price: 12,
-    spice: " ",
-    choice: " ",
-    description:
-      "Thai beef vegetable soup with meatballs (***only take this order with 5 orders or more).",
   },
   {
     name: "Pad Thai",

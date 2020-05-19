@@ -7,11 +7,11 @@ export function OrderDialog({openOrderDialog, setOpenOrderDialog, setOrders}){
       <DialogShadow/>
       <Dialog>
         <DialogContent className="container-fluid">
-          <h2>Thank you!</h2>
-          <p>
+          <h2 >Thank you!</h2>
+          <p >
             You have been emailed confirmation of your order. 
           </p>
-          <p>Thanks for choosing Noi's Kitchen.<span role="img" aria-label="emoji">🧑🏻‍🍳</span></p>
+          <p >Thanks for choosing Noi's Kitchen.<span role="img" aria-label="emoji">🧑🏻‍🍳</span></p>
         </DialogContent>
         <DialogFooter>
           <ConfirmButton onClick={() => {
