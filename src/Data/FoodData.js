@@ -16,16 +16,26 @@ export const foodItems = [
   //   description:
   //     "Sukiyaki noodle soup with red spicy homemade sauce.",
   // },
-  {
-    name: "Chicken Kao Soi",
-    img: "/img/kaosoi.jpg",
-    section: "THIS WEEK'S SPECIAL",
-    price: 12,
-    spice: " ",
-    choice: " ",
-    description:
-      "Chicken curry noodle soup",
-  },
+  // {
+  //   name: "Kao Mun Gai",
+  //   img: "/img/KMG.jpg",
+  //   section: "THIS WEEK'S SPECIAL",
+  //   price: 12,
+  //   spice: " ",
+  //   choice: " ",
+  //   description:
+  //     "Steamed chicken paired with fragrant rice that has been cooked in chicken broth and doused in ginger chili sauce",
+  // },
+  // {
+  //   name: "Chicken Kao Soi",
+  //   img: "/img/kaosoi.jpg",
+  //   section: "THIS WEEK'S SPECIAL",
+  //   price: 12,
+  //   spice: " ",
+  //   choice: " ",
+  //   description:
+  //     "Chicken curry noodle soup",
+  // },
   // {
   //   name: "Beef Noodle Soup",
   //   img: "/img/Beefsoup.jpg",
@@ -45,6 +55,15 @@ export const foodItems = [
   //   choice: " ",
   //   description:
   //     "Thai beef soup with vegetables and meatballs.",
+  // },
+  // {
+  //   name: "Cream Puffs (8 pieces)",
+  //   img: "/img/CP.jpeg",
+  //   section: "DESSERT",
+  //   price: 5,
+  //   spice: " ",
+  //   choice: " ",
+  //   description: "Homemade puff filled with delicious cream (8 pieces).",
   // },
   {
     name: "Egg Rolls",
@@ -92,11 +111,27 @@ export const foodItems = [
     description: "Thai coconut soup with chicken.",
   },
   {
+    name: "Cashew Chicken",
+    img: "/img/cashew.jpg",
+    section: "STIR-FRY",
+    price: 10,
+    spices: ["mild", "medium", "hot", "thai-hot"],
+    description: "Roasted cashew with chicken, onions, and pepper stir fried with homemade sauce.",
+  },
+  {
+    name: "Stir-fry Bok Choy",
+    img: "/img/bokchoy.jpg",
+    section: "STIR-FRY",
+    price: 10,
+    spices: ["mild", "medium", "hot", "thai-hot"],
+    description: "Bok Choy stir fried with Thai homemade sauce.",
+  },
+  {
     name: "Pad Thai",
     img: "/img/Padthai.jpg",
     section: "STIR-FRY",
     price: 10,
-    choices: ["chicken", "pork"],
+    choices: ["chicken", "pork", "tofu"],
     spices: ["mild", "medium", "hot", "thai-hot"],
   },
   {
@@ -128,7 +163,6 @@ export const foodItems = [
     img: "/img/Grapow.jpg",
     section: "STIR-FRY",
     price: 12,
-    choices: ["chicken", "pork"],
     spices: ["mild", "medium", "hot", "thai-hot"],
   },
   {
@@ -136,7 +170,7 @@ export const foodItems = [
     img: "/img/Friedrice.jpg",
     section: "STIR-FRY",
     price: 10,
-    choices: ["chicken", "pork"],
+    choices: ["chicken", "pork", "tofu"],
     spices: ["mild", "medium", "hot", "thai-hot"],
   },
   {
@@ -188,21 +222,21 @@ export const foodItems = [
     spices: ["mild", "medium", "hot", "thai-hot"],
     description: "Pork laab with sticky rice.",
   },
-  {
-    name: "Grilled Steak Salad",
-    img: "/img/Namtok.jpg",
-    section: "THAI MEAT SALAD",
-    price: 12,
-    choice: " ",
-    spices: ["medium", "hot", "thai-hot"],
-    description: "Grilled Thai steak salad with sticky rice.",
-  },
+  // {
+  //   name: "Grilled Steak Salad",
+  //   img: "/img/Namtok.jpg",
+  //   section: "THAI MEAT SALAD",
+  //   price: 12,
+  //   choice: " ",
+  //   spices: ["medium", "hot", "thai-hot"],
+  //   description: "Grilled Thai steak salad with sticky rice.",
+  // },
   {
     name: "Green Curry",
     img: "/img/Greencurry.jpg",
     section: "CURRY",
     price: 10,
-    choices: ["chicken", "pork"],
+    choices: ["chicken", "pork", "tofu"],
     spices: ["medium", "hot", "thai-hot"],
   },
   {
@@ -217,7 +251,7 @@ export const foodItems = [
     img: "/img/Panang.jpg",
     section: "CURRY",
     price: 10,
-    choices: ["chicken", "pork"],
+    choices: ["chicken", "pork", "tofu"],
     spices: ["mild", "medium", "hot", "thai-hot"],
   },
   {
